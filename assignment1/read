@@ -1,1 +1,10 @@
-README
+api.py (or main.py): only handles HTTP things
+* routes (@app.get, @app.post, etc.)
+* request/response models (Pydantic)
+* calling your “business logic” (the scoring function)
+
+scoring.py (or model.py): contains the “scoring algorithm” function
+* for now it can return a placeholder value (or be empty but importable)
+* later it will implement house-price prediction/scoring
+
+This is a standard pattern in MLOps: separate serving layer (API) from ML logic.
